@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Brand Show Page</title>
+</head>
+<body>
+<div class= "header">
+    <div class= "header-title">
+        <a href = "/"><img src="/img/noun_circle in circle_318482.png" alt="logo"></a>
+        <h1>BRANDING KITS</h1>
+    </div>
+    <!-- navigation -->
+    
+    <div class="header-nav">
+        <nav>
+        <li>
+            <a href="/users/new">Create a new Brand Kit</a>
+        </li>
+        <li>
+            <a href="/users/60935693540812fadb08c556">Sample Brand Kit</a>
+        </li>
+        <!-- <li> -->
+            <!-- <a href="/sessions/new">Log In</a> -->
+        <!-- </li> -->
+        </nav>
+    </div>
+</div>
+<div class = "show">
+    <h1>Branding show page</h1>
+    <h2>In this Brand Kit, we are storing information about the company: <em><%=brandShow.name %></em>. </h2>
+    <div class="brandkit">
+    <p>
+        The brand colors of <strong><%=brandShow.name %> </strong>are:
+        <table style ="width: 100%">
+         <tr class = "color-table">
+             <td style="background-color: #<%=brandShow.colorsOne %>"></td>
+             <td style="background-color: #<%=brandShow.colorsTwo %>"></td>
+             <td style="background-color: #<%=brandShow.colorsThree %>"></td>
+         </tr> 
+         <tr>
+            <td>Primary Brand Color: <%=brandShow.colorsOne %></td>
+            <td>Secondary Brand Color: <%=brandShow.colorsTwo %></td>
+            <td>Terciary Brand Color: <%=brandShow.colorsThree %></td>
+        </tr>
+        </table>
+        <div class = "mid-text" style="background-color: #<%=brandShow.colorsOne %>">
+            <h3>The header text for <%=brandShow.name %> is <%=brandShow.typographyOne %></h3>
+            <h3>The body text for <%=brandShow.name %> is <%=brandShow.typographyTwo %></h3></br>
+            The brand values of <strong><%=brandShow.name %></strong> are: <em><%=brandShow.brandValues %></em>. </br>
+            <strong><%=brandShow.name %></strong> falls under the <em><%=brandShow.brandCategory %></em> brand category.</br>
+            Socials: <a href="<%=brandShow.socials %>">Instagram</a></br>
+            Brand Notes: <em><%=brandShow.notesEntry %></br></em>
+
+        
+        </div>
+        <div class ="columns">
+            <div class = "first-column">
+                <img src="<%=brandShow.logoImage %>" alt="logo image" class="logos"></br>
+                <h6>LOGO IMAGE</h6>
+            </div>
+            <div class = "second-column">
+                <img src=<%=brandShow.moodboardImage %> alt="moodboard image" class ="moodboards"> </br>
+                <h6>MOODBOARD</h6>
+            </div>
+        </div>
+</div>
+    <form method="get" action="/users/<%=brandShow.id%>/edit">
+        <button type="submit" class="editbutton">EDIT</button>
+    </form>
+        <form method="get" action="/">
+            <button type="submit" class="indexbutton">HOME</button>
+        </form>
+        <form action="/users/<%=brandShow.id%>?_method=DELETE" method="POST">
+        <input type="submit" class="deletebutton" value= "DELETE"/>
+    </form>
+    </p>
+
+</div>
+</body>
+<footer>
+    <h6>Created by Maria Mergal for SEI Flex: Git that bread.</h6>
+</footer>
+</html>

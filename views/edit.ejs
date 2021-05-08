@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--FONTS-->
+      <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text&family=Open+Sans&display=swap" rel="stylesheet">
+      <!--CSS-->
+      <link href= "/../css/style.css" rel="stylesheet" type="text/css" />      
+      <title>Edit Branding Kit</title>
+    </head>
+    <body>
+      <div class= "header">
+        <div class= "header-title">
+            <a href = "/"><img src="/img/noun_circle in circle_318482.png" alt="logo"></a>
+            <h1>BRANDING KITS</h1>
+        </div>
+        <!-- navigation -->
+        
+        <div class="header-nav">
+            <nav>
+            <li>
+                <a href="/users/new">Create a new Brand Kit</a>
+            </li>
+            <li>
+                <a href="/users/60935693540812fadb08c556">Sample Brand Kit</a>
+            </li>
+            <!-- <li> -->
+                <!-- <a href="/sessions/new">Log In</a> -->
+            <!-- </li> -->
+            </nav>
+        </div>
+    </div>
+    <div class ="edit">
+      <h1>Edit Kits Page</h1>
+    <div class="form-style">
+        <form action="/users/<%=brandShow.id%>?_method=PUT" method="POST">
+        <div class="row">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" value="<%=brandShow.username%>"/></br>
+        <label for="name">Company Name</label>
+        <input type="text" name="name" id="name" value="<%=brandShow.name%>"/></br>
+        <label for="name">Brand Category</label>
+        <input type="text" name="brandCategory" id="brandCategory" value="<%=brandShow.brandCategory%>"/></br>
+        <label for="name">Header Typography</label>
+        <input type="text" name="typographyOne" id="typographyOne" value="<%=brandShow.typographyOne%>"/></br>
+        <label for="name">Body Typography</label>
+        <input type="text" name="typographyTwo" id="typographyTwo" value="<%=brandShow.typographyTwo%>"/></br>
+        <label for="colorsOne">Primary Color</label>
+        <input type="text" name="colorsOne" id="colorsOne" value="<%=brandShow.colorsOne%>"/></br>
+        <label for="colorsTwo">Secondary Color</label>
+        <input type="text" name="colorsTwo" id="colorsTwo" value="<%=brandShow.colorsTwo%>"/></br>
+        <label for="colorsThree">Terciary Color</label>
+        <input type="text" name="colorsThree" id="colorsThree" value="<%=brandShow.colorsThree%>"/></br>
+        <label for="brandValues">brandValues</label>
+        <input type="text" name="brandValues" id="brandValues" value="<%=brandShow.brandValues%>"/></br>
+        <label for="logoImage">logoImage</label>
+        <input type="text" name="logoImage" id="logoImage" value="<%=brandShow.logoImage%>"/></br>
+        <label for="moodboardImage">moodboardImage</label>
+        <input type="text" name="moodboardImage" id="moodboardImage" value="<%=brandShow.moodboardImage%>"/></br>
+        <label for="socials">Social Media Links</label>
+        <input type="text" name="socials" id="socials" value="<%=brandShow.socials%>"/></br>
+        <label for="notesEntry">Notes</label>
+        <input type="textarea" name="notesEntry" id="notesEntry" value="<%=brandShow.notesEntry%>"/></br>
+      </br>
+        <input type="submit" value="Edit Brand Kit"/>
+        </div>
+      </form>
+    </div>
+    </div>
+    </body>
+    <footer>
+      <h6>Created by Maria Mergal for SEI Flex: Git that bread.</h6>
+  </footer>
+</html>
