@@ -61,16 +61,16 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE
-// router.delete('/:id', (req,res) =>{
-//     brandData.findByIdAndRemove({_id:req.params.id}, (err, deletedLog)=>{
-//       if (err){
-//         res.send(err)
-//       }else{
-//       // console.log(logsData);
-//       res.redirect('/');
-//     }
-//     });
-//   })
+router.delete('/:id', (req,res) =>{
+    brandData.findByIdAndRemove({_id:req.params.id}, (err, deletedLog)=>{
+      if (err){
+        res.send(err)
+      }else{
+      // console.log(logsData);
+      res.redirect('/');
+    }
+    });
+  })
 
 //export
 module.exports = router;
