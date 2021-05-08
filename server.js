@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 require('dotenv').config()
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/brandingcrud';
 console.log(MONGODB_URI);
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.static('public'))
 
 //CONFIGURATION
-mongoose.connect(mongoURI, {
+mongoose.connect(MONGODB_URI, {
   useNewURLParser: true, 
   useUnifiedTopology: true, 
   useFindAndModify: false,
