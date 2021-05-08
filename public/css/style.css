@@ -216,7 +216,7 @@ button{
   background-color: #476e7c;
   color: white;
   padding: 10px;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 .new, .edit{
   align-items: center;
@@ -290,7 +290,7 @@ textarea{
   background-color: #476e7c;
   color: white;
   padding: 10px;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 footer {
   padding: 20px;
