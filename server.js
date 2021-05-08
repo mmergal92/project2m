@@ -3,7 +3,11 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-const port = 3000;
+require('dotenv').config()
+const PORT = process.env.PORT || 3000;
+
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/brandingcrud';
+console.log(MONGODB_URI);
 
 //MIDDLEWARE
 //body parser
@@ -15,7 +19,7 @@ app.use(express.json());
 app.use(express.static('public'))
 
 //CONFIGURATION
-mongoose.connect('mongodb://localhost:27017/brandingcrud', {
+mongoose.connect(mongoURI, {
   useNewURLParser: true, 
   useUnifiedTopology: true, 
   useFindAndModify: false,
@@ -26,6 +30,7 @@ mongoose.connection.once('open', () => {
 
 //CONTROLLERS
 //new brand user input
+const db = mongoose.connection;
 const usersController = require('./controllers/users.js');
 const brandData = require('./models/brands.js');
 const seedBrand = require('./models/seed.js');
@@ -60,6 +65,6 @@ app.get('/seedBrand', (req, res) => {
 });
 
 //LISTENERS + CONNECTIONS
-app.listen(port, () =>{
-    console.log('listening on part: ', port);
+app.listen(PORT, () =>{
+    console.log('listening on part: ', PORT);
 });
