@@ -23,25 +23,12 @@ router.post('/', (req, res)=>{
   console.log(req.body)
   if (req.body.name.length == 0 || req.body.username.length == 0 || req.body.password.length == 0){
     res.render('users/newInc.ejs')
-    // res.send(`Some required fields are empty <a href='/users/new'> Go Back </a>`)
   }else{
     brandData.create(req.body, (error, createdLog) =>{
       res.redirect('/');
       console.log("testing users post route " + createdLog);
     })
   }
-    // brandData.create(req.body, (error, createdLog) => {
-    //     console.log(req.body)
-    //     if(req.body.name === String){
-    //       res.redirect('/');
-    //       console.log("testing users post route " + createdLog);
-    //     }else{
-    //       console.log(error);
-    //       // prompt("Please enter Company Name");
-    //       res.render('users/new.ejs');
-    //       console.log("info not complete")
-    //     }
-    // })
 })
 
 //Show route

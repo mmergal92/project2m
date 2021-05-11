@@ -59,12 +59,14 @@ a:hover {
   position: relative;
   background-size: cover;
   margin: 0px auto;
-  padding-top: 310px;
-  padding-bottom: 50px;
+  padding-top: 300px;
+  padding-bottom: 70px;
   text-align: center;
   vertical-align: bottom;
 }
 .main h1{
+  padding-left: 100px;
+  padding-right: 100px;
   font-size: 50px;
   background-color: #476e7c;
   background-image:linear-gradient( #4056e2, #1d9db4);
@@ -78,29 +80,6 @@ a:hover {
 .main p{
   font-size: 18px;
   color:#476e7c;
-}
-.show h1{
-  color:#476e7c;
-  font-family:"Big Shoulders Inline Text", cursive;
-}
-.show h2{
-  color:#476e7c;
-  font-family:"Big Shoulders Inline Text", cursive;
-  font-size: 25px;
-}
-.brandkit{
-  border: solid 2px white;
-  border-radius: 10px;
-  padding: 20px;
-}
-.mid-text{
-  margin: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-  line-height: 2;
-  text-align: center;
-  justify-content: space-evenly;
 }
 .companyIndex{
   border: solid 2px #476e7c;
@@ -132,39 +111,6 @@ li {
   text-decoration: none;
   color: #476e7c;
 }
-.editbutton, .indexbutton{
-  display: inline-block;
-  align-items: center;
-  vertical-align: middle;
-  text-align: center;
-  background-color: #476e7c;
-  color: white;
-  padding: 4px;
-  border-radius: 8px;
-  margin: 5px;
-  width: 6em
-}
-.editbutton:hover{
-  opacity: 80%;
-}
-.deletebutton:hover{
-  opacity: 80%;
-}
-.indexbutton:hover{
-  opacity: 80%;
-}
-.deletebutton{
-  display: inline-block;
-  align-items: center;
-  vertical-align: middle;
-  text-align: center;
-  background-color: black;
-  color: white;
-  padding: 4px;
-  border-radius: 8px;
-  margin: 5px;
-  width: 6em
-}
 .create{
   background-color:#476e7c;
   border-radius: 5px;
@@ -176,6 +122,30 @@ li {
 }
 .create:hover{
     opacity: 90%;
+}
+/* ===== SHOW PAGE * ===== */
+.show h1{
+  color:#476e7c;
+  font-family:"Big Shoulders Inline Text", cursive;
+}
+.show h2{
+  color:#476e7c;
+  font-family:"Big Shoulders Inline Text", cursive;
+  font-size: 25px;
+}
+.brandkit{
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.mid-text{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  line-height: 2;
+  text-align: center;
+  justify-content: space-evenly;
 }
 .color-table td{
   padding: 30px;
@@ -216,24 +186,49 @@ table{
   width: 50%;
   border-radius: 10px;
 }
-.newInc h1{
-  text-align: center;
-}
-.newInc h2{
-  color: #f03356;
-  text-align: center;
-}
-#newIncUsername, #newIncPassword, #newIncName, #newIncBrandCategory{
-  border: solid 1px #f03356;
-  border-radius: 20px;
-  background-color: #e8f0fe;
-}
 button{
   background-color: #476e7c;
   color: white;
   padding: 10px;
   border-radius: 10px;
 }
+button:hover{
+  opacity: 90%;
+}
+.editbutton, .indexbutton{
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #476e7c;
+  color: white;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 5px;
+  width: 6em
+}
+.editbutton:hover{
+  opacity: 80%;
+}
+.deletebutton:hover{
+  opacity: 80%;
+}
+.indexbutton:hover{
+  opacity: 80%;
+}
+.deletebutton{
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 5px;
+  width: 6em
+}
+/* ===== NEW AND EDIT FORMS * ===== */
 .new, .edit{
   align-items: center;
   padding: 10px;
@@ -309,9 +304,27 @@ textarea{
   padding: 10px;
   border-radius: 10px;
 }
-footer {
+.form-style input[type=submit]:hover{
+  opacity: 90%;
+}
+/* ===== NEW INCOMPLETE FORM * ===== */
+.newInc h1{
+  text-align: center;
+}
+.newInc h2{
+  color: #f03356;
+  text-align: center;
+}
+#newIncUsername, #newIncPassword, #newIncName, #newIncBrandCategory{
+  border: solid 1px #f03356;
+  border-radius: 20px;
+  background-color: #e8f0fe;
+}
+/* ===== FOOTER * ===== */
+footer {  
   padding-top: 20px;
 }
+/* ===== MOBILE RESPONSIVENESS * ===== */
 @media screen and (max-width: 600px){
   .header{
     display: flex;
