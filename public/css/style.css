@@ -147,6 +147,13 @@ li {
   text-align: center;
   justify-content: space-evenly;
 }
+.mid-text h2{
+  font-size: 25px;
+  color: white;
+}
+.mid-text h3{
+  font-size: 18px;
+}
 .color-table td{
   padding: 30px;
   border: solid 2px black;
