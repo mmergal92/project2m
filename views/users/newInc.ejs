@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text&family=Open+Sans&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link href= "../css/style.css" rel="stylesheet" type="text/css" />
+    <title>New User Brand Kit Form</title>
+</head>
+<body>
+    <div class= "header">
+        <div class= "header-title">
+            <a href = "/"><img src="/img/noun_circle in circle_318482.png" alt="logo"></a>
+            <h1>BRANDING KITS</h1>
+        </div>
+        <!-- navigation -->
+        <div class="header-nav">
+            <nav>
+            <li>
+                <a href="/users/new">Create a new Brand Kit</a>
+            </li>
+            <li>
+                <a href="/users/6096c9abc8c5520004f7d967">Sample Brand Kit</a>
+            </li>
+            <!-- <li> -->
+                <!-- <a href="/sessions/new">Log In</a> -->
+            <!-- </li> -->
+            </nav>
+        </div>
+    </div>
+    <div class="newInc">
+    <h1>Create a New Brand Kit</h1>
+    <h2>Please be sure to fill in all required fields.</h2>
+    <div class="form-style">
+    <form action="/users" method="POST">
+        <div class = row>
+        Username* <input type="text" name="username" id="newIncUsername"/></br>
+        Password* <input type="password" name="password" id="newIncPassword" /></br>
+        Company name* <input type="text" name="name" id="newIncName" /></br>
+        Brand Category* <input type="text" name="brandCategory" id="newIncBrandCategory" /></br>
+        Header Typograph <input type="text" name="typographyOne" id="typographyOne"/></br>
+        Body Typography <input type="text" name="typographyTwo" id="typographyTwo"/></br>
+        </br>
+        <em>Colors should be inputted with HEX codes</em></br>
+        Primary Brand Color <input type="text" name="colorsOne" id="colorsOne"/></br>
+        Secondary Brand Color <input type="text" name="colorsTwo" id="colorsTwo"/></br>
+        Terciary Brand Color <input type="text" name="colorsThree" id="colorsThree"/></br>
+        </br>
+        Please list a few brand Values: </br><input type="text" name="brandValues" id="brandValues"/></br>
+    </br>
+        <em>Images should be uploaded by URL links</em></br>
+        Logo Image <input type="text" name="logoImage" id="logoImage"/></br>
+        Moodboard Image <input type="text" name="moodboardImage" id="moodboardImage"/></br>
+        Social Media Links (optional) <input type="text" name="socials" id="socials"/></br>
+    </br>
+        Additional Notes (optional): </br><textarea type="textarea" name="notesEntry" id="notesEntry"></textarea></br>
+    </br>
+</br>
+        <input type="submit" value="Create Brand Kit"/>
+    </div>
+    </form>
+    </div>
+    </div>
+</body>
+<footer>
+    <h6>Created by Maria Mergal for SEI Flex: Git that bread.</h6>
+</footer>
+</html>
+

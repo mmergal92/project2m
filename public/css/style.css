@@ -215,7 +215,18 @@ table{
 .second-column img{
   width: 50%;
   border-radius: 10px;
-
+}
+.newInc h1{
+  text-align: center;
+}
+.newInc h2{
+  color: #f03356;
+  text-align: center;
+}
+#newIncUsername, #newIncPassword, #newIncName, #newIncBrandCategory{
+  border: solid 1px #f03356;
+  border-radius: 20px;
+  background-color: #e8f0fe;
 }
 button{
   background-color: #476e7c;
